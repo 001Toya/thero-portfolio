@@ -820,3 +820,22 @@ section { position: relative; }
   padding-top: 24px;
   border-top: 1px solid var(--color-border);
 }
+
+
+/* ==========================================================================
+   ICON COLOR FIX
+   Add this after the Typography section, before Global Layout
+   ========================================================================== */
+
+/* Default UI icons — make black SVG icons white */
+.icon-svg {
+  filter: brightness(0) invert(1);
+}
+
+/* Icons that should use the portfolio blue/cyan accent */
+.skill-card--featured .icon-svg,
+.interest-card .icon,
+.cred-card .icon {
+  filter: invert(42%) sepia(96%) saturate(1900%) hue-rotate(195deg)
+          brightness(95%) contrast(101%);
+}
