@@ -1,0 +1,108 @@
+/* ==========================================================================
+   THERO Portfolio — animations.css
+   Reusable keyframes and animation utility classes. Entrance/reveal classes
+   here define the target state only; future js/main.js (via
+   IntersectionObserver) will toggle the trigger classes (e.g. add
+   .is-visible to a .reveal element once it scrolls into view).
+   Motion stays subtle throughout: no bouncing, spinning or parallax.
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------------------------------------------------------------------- */
+/* Scroll reveal (triggered later by js/main.js)                           */
+/* ---------------------------------------------------------------------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+/* ---------------------------------------------------------------------- */
+/* Hero entrance (page load, orchestrated once by js/hero.js)              */
+/* ---------------------------------------------------------------------- */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade-scale-in {
+  from { opacity: 0; transform: scale(0.97); }
+  to { opacity: 1; transform: scale(1); }
+}
+.hero-entrance-text { animation: fade-up 0.8s ease both; }
+.hero-entrance-text--delay-1 { animation-delay: 0.1s; }
+.hero-entrance-text--delay-2 { animation-delay: 0.2s; }
+.hero-entrance-text--delay-3 { animation-delay: 0.3s; }
+.hero-entrance-image { animation: fade-scale-in 0.9s ease 0.15s both; }
+
+/* ---------------------------------------------------------------------- */
+/* Scroll cue pulse                                                        */
+/* ---------------------------------------------------------------------- */
+@keyframes pulse-line {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+.scroll-cue .line { animation: pulse-line 2.2s ease-in-out infinite; }
+
+/* ---------------------------------------------------------------------- */
+/* Closing arrow                                                           */
+/* ---------------------------------------------------------------------- */
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+.closing .arrow-down { animation: bob 2.4s ease-in-out infinite; }
+
+/* ---------------------------------------------------------------------- */
+/* Timeline milestone reveal (staggered by js/journey.js via style delay)  */
+/* ---------------------------------------------------------------------- */
+.t-item.reveal { transition-delay: var(--reveal-delay, 0s); }
+
+/* ---------------------------------------------------------------------- */
+/* Lightbox open/close (class toggled by js/gallery.js)                    */
+/* ---------------------------------------------------------------------- */
+@keyframes lightbox-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes lightbox-scale-in {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+.lightbox--open .lightbox__backdrop { animation: lightbox-fade-in 0.25s ease both; }
+.lightbox--open .lightbox__content { animation: lightbox-scale-in 0.3s ease both; }
+
+/* ---------------------------------------------------------------------- */
+/* Form states (classes toggled by js/contact.js)                          */
+/* ---------------------------------------------------------------------- */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+.btn--loading { position: relative; color: transparent; pointer-events: none; }
+.btn--loading::after {
+  content: "";
+  position: absolute;
+  width: 16px; height: 16px;
+  top: 50%; left: 50%;
+  margin: -8px 0 0 -8px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes shake {
+  10%, 90% { transform: translateX(-1px); }
+  20%, 80% { transform: translateX(2px); }
+  30%, 50%, 70% { transform: translateX(-3px); }
+  40%, 60% { transform: translateX(3px); }
+}
+.field--error input { animation: shake 0.4s ease; }

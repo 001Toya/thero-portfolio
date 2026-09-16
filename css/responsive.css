@@ -1,0 +1,107 @@
+/* ==========================================================================
+   THERO Portfolio — responsive.css
+   Tablet and mobile adaptations. Desktop-first: style.css defines the
+   desktop layout, this file narrows it down at each breakpoint.
+   Breakpoints: tablet <= 1024px, mobile <= 640px
+   ========================================================================== */
+
+/* ---------------------------------------------------------------------- */
+/* Tablet: <= 1024px                                                        */
+/* ---------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .wrap { padding: 0 40px; }
+
+  h1 { font-size: 3rem; }
+  h2 { font-size: 2.1rem; }
+
+  .primary-nav { gap: 22px; }
+  .primary-nav a { font-size: 0.82rem; }
+
+  .hero { padding: 120px 0 60px; }
+  .hero .wrap { grid-template-columns: 1fr; gap: 40px; }
+  .hero__portrait { max-width: 420px; }
+
+  .about .wrap { grid-template-columns: 1fr; gap: 40px; }
+  .about__portrait { order: -1; max-width: 320px; }
+  .info-cards { grid-template-columns: 1fr 1fr; }
+
+  .journey-tracks { grid-template-columns: 1fr; gap: 28px; }
+
+  .skills-grid { grid-template-columns: 1fr 1fr; }
+  .skill-card--featured { grid-column: span 2; flex-direction: column; align-items: flex-start; }
+
+  .project-card,
+  .project-card--featured { grid-template-columns: 1fr; }
+  .project-card__visual { border-right: none; border-bottom: 1px solid var(--color-border); }
+
+  .art-gallery { grid-template-columns: repeat(3, 1fr); }
+
+  .interest-grid { grid-template-columns: 1fr 1fr; }
+
+  .cl-grid { grid-template-columns: 1fr; }
+
+  .cred-list { grid-template-columns: 1fr; }
+
+  .contact .wrap { grid-template-columns: 1fr; gap: 40px; }
+
+  .lightbox__nav--prev { left: 6px; }
+  .lightbox__nav--next { right: 6px; }
+}
+
+/* ---------------------------------------------------------------------- */
+/* Mobile: <= 640px                                                         */
+/* ---------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  .wrap { padding: 0 20px; }
+
+  h1 { font-size: 2.3rem; }
+  h2 { font-size: 1.7rem; }
+
+  /* desktop nav / cta hidden, drawer toggle takes over */
+  .primary-nav,
+  .nav-cta .btn-primary { display: none; }
+  .menu-toggle { display: flex; }
+
+  .site-header { padding: 18px 0; }
+
+  .hero { padding: 110px 0 60px; min-height: auto; }
+  .hero__ctas { flex-direction: column; align-items: stretch; }
+  .hero__ctas .btn { justify-content: center; }
+
+  .about { padding: 70px 0; }
+  .info-cards { grid-template-columns: 1fr; }
+
+  .journey { padding: 70px 0; }
+  .track { padding: 26px 22px; }
+
+  .skills { padding: 70px 0; }
+  .skills-grid { grid-template-columns: 1fr; }
+  .skill-card--featured { grid-column: 1 / -1; }
+
+  .projects { padding: 70px 0; }
+  .project-card__body { padding: 22px 20px 20px; }
+
+  .art { padding: 70px 0; }
+  .art-gallery { grid-template-columns: 1fr 1fr; gap: 10px; }
+
+  .interests { padding: 70px 0; }
+  .interest-grid { grid-template-columns: 1fr; }
+
+  .learning { padding: 60px 0; }
+  .credentials { padding: 60px 0; }
+
+  .closing { padding: 80px 0; }
+
+  .contact { padding: 0 0 70px; }
+
+  .lightbox { padding: 16px; }
+  .lightbox__nav { width: 34px; height: 34px; }
+
+  .site-footer .wrap { flex-direction: column; align-items: flex-start; text-align: left; }
+  .footer-nav { gap: 12px 18px; }
+}
+
+/* Guard against any accidental horizontal overflow at small widths */
+@media (max-width: 480px) {
+  html, body { overflow-x: hidden; }
+}

@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>THERO — Hyginus Toya Andre-Elladim | Software Engineering Student &amp; Artist</title>
+<meta name="description" content="Portfolio of THERO (Hyginus Toya Andre-Elladim) — Software Engineering student, web developer, AI enthusiast, and portrait artist.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ==========================================================================
+     HEADER / PRIMARY NAVIGATION
+     future js/navigation.js will:
+       - toggle .site-header--scrolled on scroll
+       - toggle .is-active on the primary-nav link matching the section in view
+       - open/close #mobile-drawer via #menu-open / #menu-close
+     ========================================================================== -->
+<header class="site-header" id="site-header">
+  <div class="wrap">
+    <a href="#home" class="logo">THERO</a>
+
+    <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+      <a href="#home" class="is-active">Home</a>
+      <a href="#about">About</a>
+      <a href="#journey">Journey</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#art">Art</a>
+      <a href="#interests">Interests</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-cta">
+      <a href="#contact" class="btn btn-primary">Let's Connect</a>
+      <button class="menu-toggle" id="menu-open" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-drawer">
+        <img src="assets/icons/ui/menu.svg" alt="" class="icon-svg">
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile slide-out navigation drawer (closed state by default) -->
+<div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <div class="mobile-drawer__backdrop" id="drawer-backdrop"></div>
+  <div class="mobile-drawer__panel">
+    <div class="mobile-drawer__top">
+      <span class="logo">THERO</span>
+      <button class="drawer-close" id="menu-close" aria-label="Close menu">
+        <img src="assets/icons/ui/x.svg" alt="" class="icon-svg">
+      </button>
+    </div>
+    <nav aria-label="Mobile">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#journey">Journey</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#art">Art</a>
+      <a href="#interests">Interests</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="btn btn-primary">Let's Connect</a>
+  </div>
+</div>
+
+<main id="main">
+
+  <!-- ======================================================================
+       HOME / HERO
+       ====================================================================== -->
+  <section class="hero" id="home">
+    <div class="wrap">
+      <div>
+        <p class="kicker hero-entrance-text">SOFTWARE ENGINEERING • AI • ART • CREATIVITY</p>
+        <h1 class="hero-entrance-text hero-entrance-text--delay-1">I build with logic. I create with imagination.</h1>
+        <p class="hero__lead hero-entrance-text hero-entrance-text--delay-2">
+          I'm <strong>Hyginus Toya Andre-Elladim</strong>, a Software Engineering student and creative artist exploring the space where technology, problem-solving, artificial intelligence, and artistic expression meet.
+        </p>
+        <div class="hero__ctas hero-entrance-text hero-entrance-text--delay-3">
+          <a href="#projects" class="btn btn-primary">
+            Explore My Work
+            <img src="assets/icons/ui/arrow-up-right.svg" alt="" class="icon-svg">
+          </a>
+          <a href="#about" class="btn btn-ghost">Get to Know Me</a>
+        </div>
+        <p class="hero__descriptor hero-entrance-text hero-entrance-text--delay-3">
+          Software Engineering Student · Web Developer · AI Enthusiast · Artist
+        </p>
+      </div>
+
+      <div class="hero__portrait hero-entrance-image">
+        <img src="assets/images/profile/ProHeadshot.jpeg" alt="Portrait of Hyginus Toya Andre-Elladim (THERO)">
+        <span class="tag">Toya Hyginus · THERO</span>
+        <span class="accent-line"></span>
+      </div>
+    </div>
+
+    <div class="scroll-cue" aria-hidden="true">
+      <span>SCROLL</span>
+      <span class="line"></span>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       ABOUT
+       ====================================================================== -->
+  <section class="about" id="about">
+    <div class="wrap">
+      <div class="about__portrait">
+        <img src="assets/images/profile/ProHeadshot.jpeg" alt="Hyginus Toya Andre-Elladim seated, working">
+      </div>
+
+      <div class="about__body">
+        <p class="kicker">ABOUT ME</p>
+        <h2>More than just code.</h2>
+
+        <p>I'm Hyginus Toya Andre-Elladim, a Software Engineering student at Wigwe University, with a growing focus on web and software development.</p>
+        <p>I'm curious about how technology works, but I'm equally interested in what can be created with it. My journey in software engineering has taken me through programming, web development, Git, collaborative projects, and an increasing interest in using artificial intelligence to solve problems, improve processes, and build useful systems.</p>
+        <p>My background in art has also shaped how I approach challenges, teaching me to value creativity, patience, observation, and attention to detail.</p>
+        <p>Outside technology, I'm an artist and singer. I enjoy creating things — whether that means building a website, developing a new technical skill, experimenting with AI, drawing a portrait, or exploring a new idea. I'm currently focused on becoming a stronger software engineer while continuing to grow as a creative and well-rounded individual.</p>
+
+        <div class="info-cards">
+          <div class="info-card">
+            <div class="label">EDUCATION</div>
+            <div class="value">Software Engineering<br>Wigwe University</div>
+          </div>
+          <div class="info-card">
+            <div class="label">TECHNICAL FOCUS</div>
+            <div class="value">Web Development · Software Development · AI</div>
+          </div>
+          <div class="info-card">
+            <div class="label">CREATIVE</div>
+            <div class="value">Visual Art · Singing</div>
+          </div>
+          <div class="info-card">
+            <div class="label">CURRENT GOAL</div>
+            <div class="value">Build useful systems, solve meaningful problems, and keep growing.</div>
+          </div>
+        </div>
+
+        <a href="#journey" class="discover-link">
+          Discover my journey
+          <img src="assets/icons/ui/chevron-right.svg" alt="" class="icon-svg">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       JOURNEY
+       ====================================================================== -->
+  <section class="journey" id="journey">
+    <div class="wrap">
+      <div class="journey__intro">
+        <p class="kicker">MY JOURNEY</p>
+        <h2>Two paths. One constant: creating.</h2>
+        <p>My journey has never been about having everything figured out from the beginning. Both software engineering and art became meaningful to me through curiosity, practice, and the desire to turn ideas into something real.</p>
+      </div>
+
+      <div class="journey-tracks">
+
+        <article class="track track--eng">
+          <div class="track__head">
+            <span class="track-dot" aria-hidden="true"></span>
+            <h3>Software Engineering Journey</h3>
+          </div>
+
+          <h4>From choosing a course to finding a direction</h4>
+          <p>I did not initially choose Software Engineering because I had already decided that it was the path for me. I chose it because it was the closest university programme to what I wanted to study. That changed as I began my studies at Wigwe University.</p>
+          <p>As I learned programming, I became increasingly interested in the idea of turning manual processes into streamlined, scalable solutions. Programming stopped feeling like just another academic subject and started becoming a way of thinking about problems differently.</p>
+          <p>Projects such as Order Up and a simple calculator project helped broaden my understanding of what I could build with code and, more importantly, expanded my interest in software development. In the Order Up group project, I served as team leader, helped move the development process forward, and contributed to the manager dashboard.</p>
+
+          <h4>Stepping into the real world</h4>
+          <p>I am currently gaining professional experience as a Software Engineering Intern at Cubbes, where I have been exposed to how real software teams collaborate, build, test, improve, and document products. My experience so far has introduced me to practical areas such as:</p>
+          <ul>
+            <li>Git and GitHub</li>
+            <li>Structured data and SEO</li>
+            <li>Product testing and QA</li>
+            <li>Web development</li>
+            <li>JavaScript and continued development</li>
+          </ul>
+          <p>These experiences have helped me move beyond simply writing code and start understanding the wider process of building software responsibly.</p>
+
+          <h4>Where I am heading</h4>
+          <p>I am still discovering which area of software engineering I want to pursue most deeply, and I see that as part of the journey rather than something I need to decide immediately. One area that continues to interest me is artificial intelligence — particularly how AI can be used efficiently within my workflow, to solve problems, improve processes, and help build useful systems.</p>
+          <p class="track__closer">I am still learning, but each project, technical challenge, and professional experience is helping me understand the kind of engineer I want to become.</p>
+        </article>
+
+        <article class="track track--art">
+          <div class="track__head">
+            <span class="track-dot" aria-hidden="true"></span>
+            <h3>Artistic Journey</h3>
+          </div>
+
+          <h4>It started with superheroes</h4>
+          <p>My artistic journey began when I was 12 years old in 2019, when I would copy almost every superhero I could find. When I entered secondary school in late 2021, my classmates discovered that I could draw and started asking me to draw them. At the time, my work was far from where it is today, but their encouragement kept me drawing. Eventually, I realized that enthusiasm alone would not take me very far. I wanted to improve.</p>
+
+          <h4>Learning through curiosity</h4>
+          <p>I turned to YouTube and began teaching myself how to draw, starting with faces and shading. Looking back, I probably started in the wrong order — I was fascinated by shading before I fully understood structure, anatomy, or perspective. But I loved one thing about portraiture: the challenge of taking a real face and trying to reproduce it as accurately as possible with nothing more than paper and pencil.</p>
+          <p>As I continued learning, I expanded into structure, anatomy, perspective, and form. Learning those fundamentals eventually made my portraits better and helped me understand why the things I had been drawing worked.</p>
+
+          <h4>From practice to portraiture</h4>
+          <p>Over the years, I kept drawing faces consistently. The progress was gradual, but noticeable. The same people who encouraged me when I was starting could eventually see how far the work had come — and so could I. My mum and elder brother have also been important sources of encouragement throughout that journey.</p>
+          <p>Today, I mainly identify as a portrait artist, while continuing to explore the possibilities of coloured artwork, digital art, and animation.</p>
+
+          <h4>Still becoming</h4>
+          <p class="track__closer">Both software engineering and art have taught me something similar: skill grows through curiosity, practice, and the willingness to keep learning. I am still figuring out where both paths will take me, but I know I want to keep building, creating, and improving along the way.</p>
+        </article>
+
+      </div>
+
+      <ol class="timeline" aria-label="Journey milestones">
+        <li class="t-item"><div class="yr">2019</div><h4>The Beginning of My Art Journey</h4></li>
+        <li class="t-item"><div class="yr">Late 2021</div><h4>School, Encouragement &amp; Portraits</h4></li>
+        <li class="t-item"><div class="yr">2022 — Present</div><h4>Learning the Fundamentals</h4></li>
+        <li class="t-item"><div class="yr">University</div><h4>Discovering Software Engineering</h4></li>
+        <li class="t-item"><div class="yr">Early Projects</div><h4>Learning by Building</h4></li>
+        <li class="t-item"><div class="yr">2026</div><h4>Entering Professional Software Development</h4></li>
+        <li class="t-item"><div class="yr">Today</div><h4>Building Across Two Worlds</h4></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       SKILLS
+       ====================================================================== -->
+  <section class="skills" id="skills">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">SKILLS</p>
+        <h2>What I'm Building</h2>
+        <p>My skills are developing across software engineering and creative work, with a focus on learning by building, solving problems, and continuously improving.</p>
+      </div>
+
+      <div class="skills-grid">
+
+        <div class="skill-card skill-card--featured">
+          <div class="icon" aria-hidden="true">
+            <img src="assets/icons/ui/brain.svg" alt="" class="icon-svg">
+          </div>
+          <div>
+            <h4>AI &amp; Problem Solving</h4>
+            <p>I'm increasingly interested in using AI as a practical engineering tool — to explore technical problems, improve development workflows, streamline repetitive processes, and assist in building useful systems.</p>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h4>Software Engineering</h4>
+          <div class="skill-group">
+            <p class="skill-group-label">PROGRAMMING &amp; WEB</p>
+            <div class="tag-row"><span>Python</span><span>Java</span><span>JavaScript</span><span>HTML</span><span>CSS</span></div>
+          </div>
+          <div class="skill-group">
+            <p class="skill-group-label">DEVELOPMENT FOUNDATIONS</p>
+            <div class="tag-row">
+              <span>Object-Oriented Programming</span><span>Algorithms &amp; Logical Problem Solving</span>
+              <span>Responsive Web Development</span><span>DOM Manipulation</span>
+              <span>Front-End Fundamentals</span><span>Website Structure &amp; Optimization</span>
+              <span>Structured Data</span><span>Software Testing &amp; QA</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h4>Tools &amp; Workflow</h4>
+          <div class="skill-group">
+            <p class="skill-group-label">VERSION CONTROL</p>
+            <div class="tag-row"><span>Git</span><span>GitHub</span></div>
+          </div>
+          <div class="skill-group">
+            <p class="skill-group-label">DEVELOPMENT</p>
+            <div class="tag-row"><span>Visual Studio Code</span><span>Browser DevTools</span><span>Command-Line Workflows</span></div>
+          </div>
+          <div class="skill-group">
+            <p class="skill-group-label">PROFESSIONAL WORKFLOW</p>
+            <div class="tag-row"><span>Product Testing</span><span>Bug Identification</span><span>Technical Documentation</span><span>Debugging</span><span>Collaborative Development</span></div>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h4>Creative Skills</h4>
+          <div class="skill-group">
+            <p class="skill-group-label">VISUAL ART</p>
+            <div class="tag-row"><span>Portrait Drawing</span><span>Graphite Drawing</span><span>Shading</span><span>Observation &amp; Detail</span><span>Form, Structure &amp; Perspective</span></div>
+          </div>
+          <div class="skill-group">
+            <p class="skill-group-label">CREATIVE INTERESTS</p>
+            <div class="tag-row"><span>Coloured Art</span><span>Digital Art</span><span>Animation</span></div>
+          </div>
+          <div class="skill-group">
+            <p class="skill-group-label">MUSIC</p>
+            <div class="tag-row"><span>Singing</span></div>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h4>Professional Strengths</h4>
+          <div class="tag-row">
+            <span>Adaptability</span><span>Continuous Learning</span><span>Creativity</span><span>Attention to Detail</span>
+            <span>Problem Solving</span><span>Critical Thinking</span><span>Communication</span><span>Collaboration</span>
+            <span>Willingness to Receive Feedback</span>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <h4>Currently Learning</h4>
+          <div class="tag-row">
+            <span class="tag--learning">JavaScript</span><span class="tag--learning">React</span>
+            <span class="tag--learning">PHP</span><span class="tag--learning">Python</span><span class="tag--learning">Java</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       PROJECTS
+       ====================================================================== -->
+  <section class="projects" id="projects">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">PROJECTS</p>
+        <h2>Things I've Built</h2>
+        <p>A selection of projects that reflect my progression from learning programming fundamentals to building practical web experiences.</p>
+      </div>
+
+      <div class="projects-list">
+
+        <article class="project-card project-card--featured">
+          <div class="project-card__visual">
+            <img src="assets/images/projects/cubbes-clone.png" alt="Screenshot of the Cubbes website clone">
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__label">WEB DEVELOPMENT · INTERNSHIP PROJECT</p>
+            <h3>Cubbes Website Clone</h3>
+            <p>A recreation of the Cubbes website developed during my Software Engineering internship. The project gave me practical experience translating an existing website into a functional interface while working with HTML, CSS, JavaScript, assets, responsive layouts, and website structure.</p>
+            <p class="project-card__tech">Technologies: HTML · CSS · JavaScript</p>
+            <p class="project-card__role">My Role: Software Engineering Intern</p>
+            <div class="project-card__actions">
+              <a href="https://cubbes-clone-toya.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Live Demo</a>
+              <a href="https://github.com/001Toya/Cubbes_Clone_Toya" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm">View Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__visual">
+            <img src="assets/images/projects/dropbox-clone.png" alt="Screenshot of the Dropbox clone">
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__label">WEB DEVELOPMENT · PERSONAL PROJECT</p>
+            <h3>Dropbox Clone</h3>
+            <p>A recreation of the Dropbox web experience built to strengthen my front-end development and website implementation skills.</p>
+            <p class="project-card__tech">Technologies: HTML · CSS · JavaScript</p>
+            <div class="project-card__actions">
+              <a href="https://dropbox-clone-one-sand.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Live Demo</a>
+              <a href="https://github.com/001Toya/dropbox-clone" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm">View Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__visual">
+            <img src="assets/images/projects/simple-dev-calculator.png" alt="Screenshot of the Simple Dev Calculator">
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__label">PROGRAMMING · LEARNING PROJECT</p>
+            <h3>Simple Dev Calculator</h3>
+            <p>A simple calculator created while developing my programming fundamentals and applying core web technologies.</p>
+            <p class="project-card__tech">Technologies: HTML · CSS · JavaScript</p>
+            <div class="project-card__actions">
+              <a href="https://simple-dev-calculator.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Live Demo</a>
+              <a href="https://github.com/001Toya/Simple-Dev-Calculator" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm">View Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__visual">
+            <img src="" alt="" hidden>
+          </div>
+          <div class="project-card__body">
+            <p class="project-card__label">FUTURE PROJECT · CREATIVE TECHNOLOGY</p>
+            <h3>All About Art</h3>
+            <p>A future platform focused on connecting African artists with a wider audience and creating new opportunities around their work.</p>
+            <span class="status-pill">Coming Soon</span>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="projects__closer">
+        <p>More projects are on the way.</p>
+        <p class="muted">I'm continuously learning, experimenting, and building.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       ART
+       future js/gallery.js will wire up #art-gallery clicks to open
+       #artwork-lightbox with the selected artwork's data
+       ====================================================================== -->
+  <section class="art" id="art">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">THERO ARTS</p>
+        <h2>Portraits shaped by observation, patience, and the pursuit of detail.</h2>
+        <p>A collection of selected works from my journey as a portrait artist, primarily created with graphite and traditional drawing tools.</p>
+      </div>
+
+      <div class="art-gallery" id="art-gallery">
+
+        <button type="button" class="art-card" data-artwork-id="the-gaze" aria-haspopup="dialog">
+          <img src="assets/art/the-gaze.jpg" alt="The Gaze — graphite portrait of an Asian woman in quiet reflection">
+          <span class="art-card__meta"><span class="art-card__title">The Gaze</span><span class="art-card__medium">Graphite</span></span>
+        </button>
+
+        <button type="button" class="art-card" data-artwork-id="the-fearless-one" aria-haspopup="dialog">
+          <img src="assets/art/the-fearless-one.jpg" alt="The Fearless One — graphite portrait tribute to Herbert Wigwe">
+          <span class="art-card__meta"><span class="art-card__title">The Fearless One</span><span class="art-card__medium">Graphite</span></span>
+        </button>
+
+        <button type="button" class="art-card" data-artwork-id="beauty-in-a-monochrome" aria-haspopup="dialog">
+          <img src="assets/art/beauty-in-a-monochrome.jpg" alt="Beauty in a Monochrome — graphite portrait of the artist's mother">
+          <span class="art-card__meta"><span class="art-card__title">Beauty in a Monochrome</span><span class="art-card__medium">Graphite</span></span>
+        </button>
+
+        <button type="button" class="art-card" data-artwork-id="behind-the-scenes" aria-haspopup="dialog">
+          <img src="assets/art/behind-the-scenes.jpg" alt="Behind the Scenes — graphite portrait of a man walking into the unknown">
+          <span class="art-card__meta"><span class="art-card__title">Behind the Scenes</span><span class="art-card__medium">Graphite</span></span>
+        </button>
+
+        <button type="button" class="art-card" data-artwork-id="weave" aria-haspopup="dialog">
+          <img src="assets/art/weave.jpg" alt="Weave — highlighter pen chess-inspired portrait of Magnus Carlsen">
+          <span class="art-card__meta"><span class="art-card__title">Weave</span><span class="art-card__medium">Highlighter Pen</span></span>
+        </button>
+
+        <button type="button" class="art-card" data-artwork-id="self-portrait" aria-haspopup="dialog">
+          <img src="assets/art/self-portrait.jpg" alt="Self Portrait — graphite reflection of the artist">
+          <span class="art-card__meta"><span class="art-card__title">Self Portrait</span><span class="art-card__medium">Graphite</span></span>
+        </button>
+
+        <button type="button" class="art-card" data-artwork-id="zoe" aria-haspopup="dialog">
+          <img src="assets/art/zoe.jpg" alt="Zoe — graphite portrait">
+          <span class="art-card__meta"><span class="art-card__title">Zoe</span><span class="art-card__medium">Graphite</span></span>
+        </button>
+
+        <button type="button" class="art-card" data-artwork-id="faith" aria-haspopup="dialog">
+          <img src="assets/art/faith.jpg" alt="Faith — graphite portrait">
+          <span class="art-card__meta"><span class="art-card__title">Faith</span><span class="art-card__medium">Graphite</span></span>
+        </button>
+
+        <button type="button" class="art-card" data-artwork-id="lavender" aria-haspopup="dialog">
+          <img src="assets/art/lavender.jpg" alt="Lavender — graphite portrait">
+          <span class="art-card__meta"><span class="art-card__title">Lavender</span><span class="art-card__medium">Graphite</span></span>
+        </button>
+
+        <button type="button" class="art-card" data-artwork-id="ebenezer" aria-haspopup="dialog">
+          <img src="assets/art/ebenezer.jpg" alt="Ebenezer — graphite portrait">
+          <span class="art-card__meta"><span class="art-card__title">Ebenezer</span><span class="art-card__medium">Graphite</span></span>
+        </button>
+
+        <button type="button" class="art-card" data-artwork-id="gift" aria-haspopup="dialog">
+          <img src="assets/art/gift.jpg" alt="Gift — graphite portrait">
+          <span class="art-card__meta"><span class="art-card__title">Gift</span><span class="art-card__medium">Graphite</span></span>
+        </button>
+
+        <button type="button" class="art-card" data-artwork-id="ibiye" aria-haspopup="dialog">
+          <img src="assets/art/ibiye.jpg" alt="Ibiye — graphite portrait">
+          <span class="art-card__meta"><span class="art-card__title">Ibiye</span><span class="art-card__medium">Graphite</span></span>
+        </button>
+
+      </div>
+
+      <div class="art__closer">
+        <p>More to come.</p>
+        <p class="muted">Portraiture is where my artistic journey currently lives, but I'm continuing to explore colour, digital art, animation, and new ways of creating.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Artwork lightbox — hidden by default; content populated by js/gallery.js -->
+  <div class="lightbox" id="artwork-lightbox" role="dialog" aria-modal="true" aria-label="Artwork viewer">
+    <div class="lightbox__backdrop" id="lightbox-backdrop"></div>
+    <button type="button" class="lightbox__nav lightbox__nav--prev" id="lightbox-prev" aria-label="Previous artwork">
+      <img src="assets/icons/ui/chevron-left.svg" alt="" class="icon-svg">
+    </button>
+    <div class="lightbox__content">
+      <button type="button" class="lightbox__close" id="lightbox-close" aria-label="Close">
+        <img src="assets/icons/ui/x.svg" alt="" class="icon-svg">
+      </button>
+      <div class="lightbox__visual">
+        <img id="lightbox-image" src="" alt="">
+      </div>
+      <div class="lightbox__info">
+        <h4 id="lightbox-title"></h4>
+        <p class="lightbox__medium" id="lightbox-medium"></p>
+        <p id="lightbox-description"></p>
+      </div>
+    </div>
+    <button type="button" class="lightbox__nav lightbox__nav--next" id="lightbox-next" aria-label="Next artwork">
+      <img src="assets/icons/ui/chevron-right.svg" alt="" class="icon-svg">
+    </button>
+  </div>
+
+  <!-- ======================================================================
+       INTERESTS
+       ====================================================================== -->
+  <section class="interests" id="interests">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">INTERESTS</p>
+        <h2>What Keeps Me Curious</h2>
+      </div>
+
+      <div class="interest-grid">
+        <div class="interest-card">
+          <img src="assets/icons/ui/code-2.svg" alt="" class="icon">
+          <h4>Building with Technology</h4>
+          <p>I enjoy exploring how software can turn an idea or a manual process into something useful and scalable.</p>
+        </div>
+        <div class="interest-card">
+          <img src="assets/icons/ui/brain.svg" alt="" class="icon">
+          <h4>AI &amp; Experimentation</h4>
+          <p>I'm fascinated by what AI can do and especially interested in finding practical ways to use it to solve problems, build things, and improve the way I work.</p>
+        </div>
+        <div class="interest-card">
+          <img src="assets/icons/ui/palette.svg" alt="" class="icon">
+          <h4>Art</h4>
+          <p>Drawing has been part of my life since I was young. I still love the challenge of taking a face, studying its details, and recreating it on paper.</p>
+        </div>
+        <div class="interest-card">
+          <img src="assets/icons/ui/music.svg" alt="" class="icon">
+          <h4>Music</h4>
+          <p>I enjoy singing. It's another way I express myself creatively.</p>
+        </div>
+        <div class="interest-card">
+          <img src="assets/icons/ui/book-open.svg" alt="" class="icon">
+          <h4>Learning New Things</h4>
+          <p>I genuinely enjoy picking up something I don't know, experimenting with it, and seeing how far I can take it.</p>
+        </div>
+        <div class="interest-card">
+          <img src="assets/icons/ui/sparkles.svg" alt="" class="icon">
+          <h4>Creative Ideas</h4>
+          <p>I like the process of turning an idea in my head into something I can actually see, use, or share.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       CURRENTLY LEARNING
+       ====================================================================== -->
+  <section class="learning" id="learning">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">CURRENTLY LEARNING</p>
+        <h2>Always Learning. Always Building.</h2>
+      </div>
+      <div class="cl-grid">
+        <div class="cl-card">
+          <h4>CURRENTLY LEARNING</h4>
+          <p>JavaScript · React · PHP · Python · Java</p>
+        </div>
+        <div class="cl-card">
+          <h4>CURRENTLY BUILDING</h4>
+          <p>A personal project currently in development.</p>
+        </div>
+        <div class="cl-card">
+          <h4>LOOKING AHEAD</h4>
+          <p>I'm looking forward to continued growth and improvement in my career, while exploring how AI can help me build better solutions and streamline the way I work.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       CREDENTIALS
+       ====================================================================== -->
+  <section class="credentials" id="credentials">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">CREDENTIALS</p>
+        <h2>Documents &amp; Certificates</h2>
+        <p>A few documents that provide additional context to my academic and professional development.</p>
+      </div>
+
+      <div class="cred-list">
+        <div class="cred-card">
+          <img src="assets/icons/ui/file-text.svg" alt="" class="icon">
+          <h4>Curriculum Vitae</h4>
+          <p class="issuer">THERO</p>
+          <p>A concise overview of my education, technical experience, skills, and development journey.</p>
+          <div class="cred-actions">
+            <a href="assets/documents/THERO-CV.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" aria-label="View CV (opens PDF in new tab)">View CV</a>
+            <a href="assets/documents/THERO-CV.pdf" download class="btn btn-ghost btn-sm" aria-label="Download CV as PDF">Download CV</a>
+          </div>
+        </div>
+
+        <div class="cred-card">
+          <img src="assets/icons/ui/award.svg" alt="" class="icon">
+          <h4>Claude 101</h4>
+          <p class="issuer">Certificate of Completion · Issued by ANTHROP\C</p>
+          <p>Certificate of Completion for the Claude 101 course, issued by ANTHROP\C.</p>
+          <div class="cred-actions">
+            <a href="assets/documents/CLAUDE-101-CERTIFICATE.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" aria-label="View Claude 101 certificate (opens PDF in new tab)">View Certificate</a>
+            <a href="assets/documents/CLAUDE-101-CERTIFICATE.pdf" download class="btn btn-ghost btn-sm" aria-label="Download Claude 101 certificate as PDF">Download Certificate</a>
+          </div>
+        </div>
+
+        <div class="cred-card">
+          <img src="assets/icons/ui/award.svg" alt="" class="icon">
+          <h4>NAMTECH</h4>
+          <p class="issuer">Certificate of Participation · 27 March 2025</p>
+          <p>Participation in the Untold Opportunity in Manufacturing, Engineering &amp; Technology webinar, held on 27 March 2025 and organized by NAMTECH (New Age Makers' Institute of Technology).</p>
+          <div class="cred-actions">
+            <a href="assets/documents/NAMTECH-CERTIFICATE.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" aria-label="View NAMTECH certificate (opens PDF in new tab)">View Certificate</a>
+            <a href="assets/documents/NAMTECH-CERTIFICATE.pdf" download class="btn btn-ghost btn-sm" aria-label="Download NAMTECH certificate as PDF">Download Certificate</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       CLOSING
+       ====================================================================== -->
+  <section class="closing">
+    <div class="wrap">
+      <h2>And there you have it.</h2>
+      <p>That's a little about who I am, what I've been building, what I enjoy, and where I'm headed.</p>
+      <a href="#contact" class="btn btn-primary">Want to connect? Let's talk.</a>
+      <div class="arrow-down" aria-hidden="true">
+        <img src="assets/icons/ui/chevron-down.svg" alt="" class="icon-svg">
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       CONTACT
+       Form posts to Formspree (https://formspree.io/f/xqpakknz) via
+       future js/contact.js using the Vanilla JS/AJAX approach — action/
+       method are set now so the form degrades gracefully before JS lands.
+       ====================================================================== -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="contact__intro">
+        <p class="kicker">CONTACT</p>
+        <h2>Let's Connect</h2>
+        <p>Whether you'd like to talk about a project, an idea, technology, art, or simply say hello, I'd love to hear from you.</p>
+
+        <a href="https://wa.me/message/4QF6BDJOUB57C1" target="_blank" rel="noopener noreferrer" class="whatsapp-cta">
+          Prefer WhatsApp? Chat with me on WhatsApp
+          <img src="assets/icons/ui/arrow-up-right.svg" alt="" class="icon-svg">
+        </a>
+
+        <nav class="social-links" aria-label="Direct contact">
+          <a href="mailto:teandre1707@gmail.com">Email <img src="assets/icons/ui/arrow-up-right.svg" alt="" class="icon-svg"></a>
+          <a href="https://github.com/001Toya" target="_blank" rel="noopener noreferrer">GitHub <img src="assets/icons/ui/arrow-up-right.svg" alt="" class="icon-svg"></a>
+          <a href="https://www.linkedin.com/in/toyahyginus" target="_blank" rel="noopener noreferrer">LinkedIn <img src="assets/icons/ui/arrow-up-right.svg" alt="" class="icon-svg"></a>
+          <a href="https://www.instagram.com/thero_arts" target="_blank" rel="noopener noreferrer">Instagram <img src="assets/icons/ui/arrow-up-right.svg" alt="" class="icon-svg"></a>
+          <a href="https://www.tiktok.com/@thero_arts" target="_blank" rel="noopener noreferrer">TikTok <img src="assets/icons/ui/arrow-up-right.svg" alt="" class="icon-svg"></a>
+        </nav>
+      </div>
+
+      <form class="contact-form" id="contact-form" action="https://formspree.io/f/xqpakknz" method="POST" novalidate>
+        <div class="field" id="field-name">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" autocomplete="name" required>
+          <span class="field__error" id="error-name">Please enter your name.</span>
+        </div>
+        <div class="field" id="field-email">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+          <span class="field__error" id="error-email">Please enter a valid email address.</span>
+        </div>
+        <div class="field" id="field-phone">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" autocomplete="tel">
+        </div>
+
+        <p class="form-note">Submissions are handled securely via Formspree.</p>
+
+        <button type="submit" class="btn btn-primary" id="submit-btn">Send Message</button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- ======================================================================
+     FOOTER
+     ====================================================================== -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-brand">
+      <span class="logo">THERO</span>
+      <span class="tagline">Software Engineering Student · Creative · Artist — Stay cool.</span>
+    </div>
+
+    <nav class="footer-nav" aria-label="Footer">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#journey">Journey</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#art">Art</a>
+      <a href="#interests">Interests</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="footer-social">
+      <a href="https://github.com/001Toya" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <img src="assets/icons/brands/github.svg" alt="" class="icon-svg">
+      </a>
+      <a href="https://www.linkedin.com/in/toyahyginus" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <img src="assets/icons/brands/linkedin.svg" alt="" class="icon-svg">
+      </a>
+      <a href="https://www.instagram.com/thero_arts" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <img src="assets/icons/brands/instagram.svg" alt="" class="icon-svg">
+      </a>
+      <a href="https://www.tiktok.com/@thero_arts" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+        <img src="assets/icons/brands/tiktok.svg" alt="" class="icon-svg">
+      </a>
+      <a href="https://wa.me/message/4QF6BDJOUB57C1" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        <img src="assets/icons/brands/whatsapp.svg" alt="" class="icon-svg">
+      </a>
+      <a href="mailto:teandre1707@gmail.com" aria-label="Email">
+        <img src="assets/icons/ui/mail.svg" alt="" class="icon-svg">
+      </a>
+    </div>
+  </div>
+  <p class="copyright">© 2026 THERO. All rights reserved.</p>
+</footer>
+
+<!--
+  Future JavaScript modules (not implemented in this HTML/CSS pass):
+  js/main.js        — bootstraps modules, IntersectionObserver for .reveal
+  js/navigation.js  — header scroll state, active-link tracking, mobile drawer
+  js/hero.js        — hero entrance orchestration (if needed beyond CSS)
+  js/journey.js     — timeline stagger reveal
+  js/skills.js       — skills card stagger reveal
+  js/projects.js    — project card interactions
+  js/gallery.js     — #artwork-lightbox open/close/prev/next, keyboard nav
+  js/contact.js     — #contact-form validation + Formspree AJAX submission
+  js/data.js        — shared data loading helpers for data/artwork.json,
+                       data/projects.json
+  js/js-lab.js       — W3Schools JavaScript course sandbox / experiments
+
+  Example future wiring:
+  <script src="js/data.js" defer></script>
+  <script src="js/navigation.js" defer></script>
+  <script src="js/hero.js" defer></script>
+  <script src="js/journey.js" defer></script>
+  <script src="js/skills.js" defer></script>
+  <script src="js/projects.js" defer></script>
+  <script src="js/gallery.js" defer></script>
+  <script src="js/contact.js" defer></script>
+  <script src="js/main.js" defer></script>
+-->
+
+</body>
+</html>
